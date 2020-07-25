@@ -41,7 +41,8 @@ class CircularImageView @JvmOverloads constructor(
         if(useStroke){
             paint.style = Paint.Style.STROKE
             paint.color = Color.GREEN
-            paint.strokeWidth = 5f
+            paint.strokeWidth = 10f
+            invalidate()
         }
 
         val radius = if(width>height) (height/2).toFloat() else (width/2).toFloat()

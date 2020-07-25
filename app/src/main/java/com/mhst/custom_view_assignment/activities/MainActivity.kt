@@ -31,13 +31,15 @@ class MainActivity : AppCompatActivity(),Delegate {
 
     private fun setupTaskAdapter(){
         taskAdapter = TaskAdapter()
-
+        rvTasks.layoutManager = LinearLayoutManager(this)
+        rvTasks.adapter = taskAdapter
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupProfileRecycler()
+        setupTaskAdapter()
         profileAdapter.setNewData(mutableListOf("one","two","three","four"))
         taskAdapter.setNewData(mutableListOf("one","two","three","four"))
 

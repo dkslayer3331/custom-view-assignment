@@ -77,16 +77,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+    <Button
+        android:id="@+id/btnMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@color/lightGreen"
+        android:padding="@dimen/margin_medium_2"
+        android:background="@drawable/round_button_drawable"
         android:text="Message"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="@+id/tvJobDesc"
         app:layout_constraintStart_toStartOf="@+id/tvJobDesc"
         app:layout_constraintTop_toBottomOf="@+id/tvJobDesc" />
+
+    <com.mhst.custom_view_assignment.views.CircularImageView
+        android:id="@+id/ivShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:stroke="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
+        app:layout_constraintEnd_toStartOf="@+id/btnMessage"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/btnMessage"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    <com.mhst.custom_view_assignment.views.CircularImageView
+        android:id="@+id/ivNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:stroke="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
+        app:layout_constraintStart_toStartOf="@+id/tvLabelOpenTasks"
+        app:layout_constraintTop_toTopOf="@+id/btnMessage"
+        app:srcCompat="@drawable/ic_outline_assignment_turned_in_24" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="475dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivShare"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
