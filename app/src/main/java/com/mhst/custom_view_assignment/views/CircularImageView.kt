@@ -21,19 +21,28 @@ class CircularImageView @JvmOverloads constructor(
 
     val stroke = 0f
 
-    val strokeColor = Color.GREEN
+    var strokeColor = Color.WHITE
 
     private val path = Path()
 
     val paint = Paint()
 
+    var useStroke = false
+
     init {
         context.withStyledAttributes(attrs, R.styleable.ImageStroke){
-
+               useStroke = getBoolean(R.styleable.ImageStroke_stroke,false)
+                strokeColor = getColor(R.styleable.ImageStroke_strokeColor,strokeColor)
         }
     }
 
     override fun onDraw(canvas: Canvas?) {
+
+        if(useStroke){
+            paint.style = Paint.Style.STROKE
+            paint.color = Color.GREEN
+            paint.strokeWidth = 5f
+        }
 
         val radius = if(width>height) (height/2).toFloat() else (width/2).toFloat()
 
