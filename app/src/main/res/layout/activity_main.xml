@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,68 +8,76 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:text="Create Additional Pages"
-        android:layout_margin="@dimen/margin_medium"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="Create Additional Pages"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-     <TextView
-         android:id="@+id/tvDays"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_margin="@dimen/margin_medium"
-         android:text="@string/dummy_day"
-         android:textColor="@color/colorGrey"
-         android:layout_below="@id/tvTitle"/>
+    <TextView
+        android:id="@+id/tvDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="@string/dummy_day"
+        android:textColor="@color/colorGrey" />
 
     <TextView
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
         android:layout_margin="@dimen/margin_medium"
-        android:text="@string/dummy_date"
-        android:textColor="@color/colorGrey"
         android:layout_toRightOf="@id/tvDays"
-        android:layout_below="@id/tvTitle"/>
+        android:text="@string/dummy_date"
+        android:textColor="@color/colorGrey" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProfiles"
-        android:layout_below="@id/tvDays"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/tvDays"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <com.mhst.custom_view_assignment.views.CircularImageView
         android:id="@+id/ivCreateTask"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_add_24"
-        android:scaleType="fitXY"
-        android:layout_toRightOf="@+id/rvProfiles"
+        android:layout_below="@id/tvDays"
         android:layout_marginLeft="-8dp"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/tvDays"/>
+        android:layout_toRightOf="@+id/rvProfiles"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_add_24" />
 
-   <LinearLayout
-       android:layout_below="@id/rvProfiles"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:background="@color/lightBlue"
-       android:layout_marginTop="15dp">
+    <com.mhst.custom_view_assignment.views.CircularProgressView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:layout_below="@id/tvDays"
+        app:taskProgress="23" />
 
-       <androidx.recyclerview.widget.RecyclerView
-           android:id="@+id/rvTasks"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_below="@id/rvProfiles"
-           android:layout_marginTop="@dimen/margin_medium_2"
-           android:layout_marginLeft="@dimen/margin_medium"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvProfiles"
+        android:layout_marginTop="15dp"
+        android:background="@color/lightBlue">
 
-   </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rvProfiles"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2" />
+
+    </LinearLayout>
 
 </RelativeLayout>
