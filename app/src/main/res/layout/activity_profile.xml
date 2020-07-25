@@ -1,126 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ProfileActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.mhst.custom_view_assignment.views.CircularImageView
-        android:id="@+id/ivUserProfile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/funny_dazai"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="Closed Tasks"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".activities.ProfileActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="361"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <com.mhst.custom_view_assignment.views.CircularImageView
+            android:id="@+id/ivUserProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/funny_dazai"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvLabelOpenTasks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Open Tasks"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Closed Tasks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/tvLabelOpenTasks"
-        app:layout_constraintStart_toStartOf="@+id/tvLabelOpenTasks"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="361"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Moe Htet"
-        android:textSize="@dimen/text_regular_3x"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivUserProfile" />
+        <TextView
+            android:id="@+id/tvLabelOpenTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Open Tasks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/tvJobDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Android Developer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/tvLabelOpenTasks"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelOpenTasks"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/btnMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="@dimen/margin_medium_2"
-        android:background="@drawable/round_button_drawable"
-        android:text="Message"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/tvJobDesc"
-        app:layout_constraintStart_toStartOf="@+id/tvJobDesc"
-        app:layout_constraintTop_toBottomOf="@+id/tvJobDesc" />
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Moe Htet"
+            android:textSize="@dimen/text_regular_3x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserProfile" />
 
-    <com.mhst.custom_view_assignment.views.CircularImageView
-        android:id="@+id/ivShare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:stroke="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
-        app:layout_constraintEnd_toStartOf="@+id/btnMessage"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/btnMessage"
-        app:srcCompat="@drawable/ic_baseline_share_24" />
+        <TextView
+            android:id="@+id/tvJobDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Android Developer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
 
-    <com.mhst.custom_view_assignment.views.CircularImageView
-        android:id="@+id/ivNotes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:stroke="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
-        app:layout_constraintStart_toStartOf="@+id/tvLabelOpenTasks"
-        app:layout_constraintTop_toTopOf="@+id/btnMessage"
-        app:srcCompat="@drawable/ic_outline_assignment_turned_in_24" />
+        <Button
+            android:id="@+id/btnMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/margin_medium_2"
+            android:background="@drawable/round_button_drawable"
+            android:text="Message"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvJobDesc"
+            app:layout_constraintStart_toStartOf="@+id/tvJobDesc"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobDesc" />
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="475dp"
-        android:orientation="vertical"
-        android:layout_marginTop="@dimen/margin_large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivShare"></LinearLayout>
+        <com.mhst.custom_view_assignment.views.CircularImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:stroke="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
+            app:layout_constraintEnd_toStartOf="@+id/btnMessage"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/btnMessage"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.mhst.custom_view_assignment.views.CircularImageView
+            android:id="@+id/ivNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:stroke="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/btnMessage"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelOpenTasks"
+            app:layout_constraintTop_toTopOf="@+id/btnMessage"
+            app:srcCompat="@drawable/ic_outline_assignment_turned_in_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabMode="scrollable"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+</LinearLayout>
+
