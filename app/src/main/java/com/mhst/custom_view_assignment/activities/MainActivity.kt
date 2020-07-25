@@ -1,11 +1,12 @@
-package com.mhst.custom_view_assignment
+package com.mhst.custom_view_assignment.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mhst.custom_view_assignment.R
 import com.mhst.custom_view_assignment.adapters.ProfileAdapter
 import com.mhst.custom_view_assignment.delegate.Delegate
+import com.mhst.custom_view_assignment.utils.ItemDecorator
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),Delegate {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(),Delegate {
         rvProfiles.apply {
             adapter = profileAdapter
             layoutManager = linearLayoutManager
+            addItemDecoration(ItemDecorator(-60))
         }
     }
 

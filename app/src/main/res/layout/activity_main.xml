@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:id="@+id/tvTitle"
         android:text="Create Additional Pages"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin_medium"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_width="match_parent"
@@ -20,16 +20,18 @@
          android:id="@+id/tvDays"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_margin="8dp"
-         android:text="30 Days"
+         android:layout_margin="@dimen/margin_medium"
+         android:text="@string/dummy_day"
+         android:textColor="@color/colorGrey"
          android:layout_below="@id/tvTitle"/>
 
     <TextView
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="July 2,1997"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="@string/dummy_date"
+        android:textColor="@color/colorGrey"
         android:layout_toRightOf="@id/tvDays"
         android:layout_below="@id/tvTitle"/>
 
@@ -40,7 +42,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/profile_viewholder"
-        android:layout_margin="8dp"/>
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"/>
+
+
+    <com.mhst.custom_view_assignment.views.CircularImageView
+        android:id="@+id/ivCreateTask"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/plus_icon"
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/rvProfiles"
+        android:layout_marginLeft="-8dp"
+        android:layout_below="@id/tvDays"/>
 
 </RelativeLayout>

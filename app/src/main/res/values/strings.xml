@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">custom-view-assignment</string>
+    <string name="dummy_date">July 2,1997</string>
+    <string name="dummy_day">30 Days</string>
 </resources>
