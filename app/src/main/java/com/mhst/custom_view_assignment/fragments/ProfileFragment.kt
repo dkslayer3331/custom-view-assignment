@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.mhst.custom_view_assignment.R
 import com.mhst.custom_view_assignment.adapters.TaskAdapter
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -30,7 +31,9 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         taskAdapter = TaskAdapter()
+        rvProfileFragTasks.layoutManager = LinearLayoutManager(view.context)
         rvProfileFragTasks.adapter = taskAdapter
+        taskAdapter.setNewData(mutableListOf("one","two","three","four"))
     }
 
 }

@@ -6,4 +6,8 @@
         <attr name="strokeColor" format="color"/>
     </declare-styleable>
 
+    <declare-styleable name="ProgressView">
+        <attr name="taskProgress" format="integer"/>
+    </declare-styleable>
+
 </resources>
