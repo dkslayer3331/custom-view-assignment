@@ -17,11 +17,12 @@ class MainActivity : AppCompatActivity(),Delegate {
         profileAdapter = ProfileAdapter(this)
         val linearLayoutManager = LinearLayoutManager(this@MainActivity).apply {
            stackFromEnd = true
+            orientation = LinearLayoutManager.HORIZONTAL
         }
         rvProfiles.apply {
             adapter = profileAdapter
             layoutManager = linearLayoutManager
-            addItemDecoration(ItemDecorator(-60))
+            addItemDecoration(ItemDecorator(-40))
         }
     }
 
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity(),Delegate {
         setContentView(R.layout.activity_main)
         setupRecycler()
         profileAdapter.setNewData(mutableListOf("one","two","three","four"))
+
+        ivCreateTask.setOnClickListener {
+            startActivity(CreateTaskActivity.onNewIntent(this))
+        }
+
     }
 
     override fun onTap() {

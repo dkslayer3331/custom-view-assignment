@@ -17,6 +17,5 @@ class ProfileViewHolder(itemView: View,delegate : Delegate) : BaseViewHolder<Str
     }
 
     override fun bindData(data: String) {
-        itemView.ivProfile.setBackgroundResource(R.drawable.funny_dazai)
     }
 }
