@@ -6,7 +6,9 @@ import android.provider.CalendarContract
 import android.util.AttributeSet
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.content.withStyledAttributes
 import androidx.core.widget.ImageViewCompat
+import com.mhst.custom_view_assignment.R
 
 /**
  * Created by Moe Htet on 24,July,2020
@@ -17,9 +19,19 @@ class CircularImageView @JvmOverloads constructor(
 
     private var cornerRadius = 500f
 
+    val stroke = 0f
+
+    val strokeColor = Color.GREEN
+
     private val path = Path()
 
     val paint = Paint()
+
+    init {
+        context.withStyledAttributes(attrs, R.styleable.ImageStroke){
+
+        }
+    }
 
     override fun onDraw(canvas: Canvas?) {
 

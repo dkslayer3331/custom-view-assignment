@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mhst.custom_view_assignment.R
 import com.mhst.custom_view_assignment.adapters.ProfileAdapter
+import com.mhst.custom_view_assignment.adapters.TaskAdapter
 import com.mhst.custom_view_assignment.delegate.Delegate
 import com.mhst.custom_view_assignment.utils.ItemDecorator
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,7 +14,9 @@ class MainActivity : AppCompatActivity(),Delegate {
 
     lateinit var profileAdapter: ProfileAdapter
 
-    private fun setupRecycler(){
+    lateinit var taskAdapter : TaskAdapter
+
+    private fun setupProfileRecycler(){
         profileAdapter = ProfileAdapter(this)
         val linearLayoutManager = LinearLayoutManager(this@MainActivity).apply {
            stackFromEnd = true
@@ -26,11 +29,17 @@ class MainActivity : AppCompatActivity(),Delegate {
         }
     }
 
+    private fun setupTaskAdapter(){
+        taskAdapter = TaskAdapter()
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupRecycler()
+        setupProfileRecycler()
         profileAdapter.setNewData(mutableListOf("one","two","three","four"))
+        taskAdapter.setNewData(mutableListOf("one","two","three","four"))
 
         ivCreateTask.setOnClickListener {
             startActivity(CreateTaskActivity.onNewIntent(this))
