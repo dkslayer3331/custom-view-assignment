@@ -45,7 +45,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"/>
 
-
     <com.mhst.custom_view_assignment.views.CircularImageView
         android:id="@+id/ivCreateTask"
         android:layout_width="40dp"
