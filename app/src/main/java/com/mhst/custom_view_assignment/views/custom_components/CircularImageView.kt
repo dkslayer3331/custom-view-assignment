@@ -25,7 +25,7 @@ class CircularImageView @JvmOverloads constructor(
 
     private val path = Path()
 
-    val paint = Paint()
+    private val paint = Paint()
 
     var useStroke = false
 
@@ -45,7 +45,7 @@ class CircularImageView @JvmOverloads constructor(
             invalidate()
         }
 
-        val radius = if(width>height) (height/2).toFloat() else (width/2).toFloat()
+        val radius = (width/2).toFloat()
 
         val rectF = RectF(0f,0f,width.toFloat(),height.toFloat())
 

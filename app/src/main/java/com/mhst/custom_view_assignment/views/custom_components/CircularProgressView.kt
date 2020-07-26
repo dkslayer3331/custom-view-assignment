@@ -29,19 +29,23 @@ class CircularProgressView @JvmOverloads constructor(
         val recfF = RectF(0f,0f,width.toFloat(),height.toFloat())
         val paint = Paint()
         paint.apply {
-            strokeWidth = 5f
+            strokeWidth = 10f
             style = Paint.Style.STROKE
             color = Color.BLUE
             textSize = 40f
         }
         val originPaint = Paint().apply {
-            strokeWidth = 5f
+            strokeWidth = 10f
             style = Paint.Style.STROKE
             color = Color.DKGRAY
         }
+        val textPaint = Paint().apply{
+            color = Color.BLUE
+            textSize = 40f
+        }
         val  y = (height/2) - ((originPaint.descent() + originPaint.ascent()) / 2)
         //path.addArc(recfF,270f,180f)
-        canvas?.drawText("${progress}%",(width/2).toFloat(),y,paint)
+        canvas?.drawText("${progress}%",(width/2).toFloat(),(height/2).toFloat(),textPaint)
         canvas?.drawArc(recfF,270f,360f,false,originPaint)
         val calculated = BigDecimal(progress).divide(BigDecimal(100)).multiply(BigDecimal(360))
         canvas?.drawArc(recfF,270f,calculated.toFloat(),false,paint)
