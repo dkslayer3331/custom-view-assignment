@@ -56,9 +56,14 @@ class MainActivity : AppCompatActivity(),Delegate,MainView {
         setupProfileRecycler()
         setupTaskAdapter()
 
+        showData()
+
         ivCreateTask.setOnClickListener {
             startActivity(CreateTaskActivity.onNewIntent(this))
         }
+
+        mainPresenter.onUiReady(this)
+
 
     }
 
