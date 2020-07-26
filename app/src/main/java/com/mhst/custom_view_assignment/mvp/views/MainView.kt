@@ -6,4 +6,5 @@ package com.mhst.custom_view_assignment.mvp.views
 interface MainView : BaseView {
     fun showData()
     fun navigateToProfile()
+    fun naviageToTask()
 }

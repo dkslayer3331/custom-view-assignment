@@ -9,4 +9,5 @@ import com.mhst.custom_view_assignment.mvp.views.MainView
  */
 interface MainPresenter :  BasePresenter<MainView>,Delegate{
     fun onUiReady(lifeCycleOwner: LifecycleOwner)
+    fun navigateToTask()
 }

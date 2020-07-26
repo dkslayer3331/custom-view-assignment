@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(),Delegate,MainView {
         showData()
 
         ivCreateTask.setOnClickListener {
-            startActivity(CreateTaskActivity.onNewIntent(this))
+            mainPresenter.navigateToTask()
         }
 
         mainPresenter.onUiReady(this)
@@ -78,5 +78,9 @@ class MainActivity : AppCompatActivity(),Delegate,MainView {
 
     override fun navigateToProfile() {
         startActivity(ProfileActivity.onNewIntent(this))
+    }
+
+    override fun naviageToTask() {
+        startActivity(CreateTaskActivity.onNewIntent(this))
     }
 }

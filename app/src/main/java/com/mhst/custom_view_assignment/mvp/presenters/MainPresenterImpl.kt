@@ -11,6 +11,10 @@ class MainPresenterImpl : MainPresenter, AbstractBasePresenter<MainView>() {
         mView?.showData()
     }
 
+    override fun navigateToTask() {
+        mView?.naviageToTask()
+    }
+
     override fun onTap() {
         mView?.navigateToProfile()
     }
