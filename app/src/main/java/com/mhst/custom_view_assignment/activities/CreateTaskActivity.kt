@@ -5,13 +5,30 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.mhst.custom_view_assignment.R
+import com.mhst.custom_view_assignment.adapters.ProfileAdapter
+import com.mhst.custom_view_assignment.delegate.Delegate
 import kotlinx.android.synthetic.main.activity_create_task.*
 
-class CreateTaskActivity : AppCompatActivity() {
+class CreateTaskActivity : AppCompatActivity(),Delegate {
+
+    lateinit var profileAdapter: ProfileAdapter
+
+    private fun setupRecycler(){
+        profileAdapter = ProfileAdapter(this)
+        rvAssignee.layoutManager = LinearLayoutManager(this).apply {
+            orientation = LinearLayoutManager.HORIZONTAL
+        }
+        rvAssignee.adapter = profileAdapter
+        profileAdapter.setNewData(mutableListOf("one","two","three"))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_task)
+
+        setupRecycler()
 
         ArrayAdapter.createFromResource(
             this,
@@ -34,6 +51,10 @@ class CreateTaskActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    override fun onTap() {
+        TODO("Not yet implemented")
     }
 
 }

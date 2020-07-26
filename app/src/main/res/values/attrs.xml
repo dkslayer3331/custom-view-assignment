@@ -10,4 +10,8 @@
         <attr name="taskProgress" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="StraightProgressView">
+        <attr name="strProgress" format="integer"/>
+    </declare-styleable>
+
 </resources>

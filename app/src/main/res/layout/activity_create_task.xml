@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -106,7 +106,7 @@
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/rvAssignee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -119,8 +119,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Category"
-            app:layout_constraintStart_toStartOf="@+id/recyclerView"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+            app:layout_constraintStart_toStartOf="@+id/rvAssignee"
+            app:layout_constraintTop_toBottomOf="@+id/rvAssignee" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/materialButton"
@@ -136,8 +136,17 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10"
             app:layout_constraintVertical_bias="0.13999999" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.mhst.custom_view_assignment.views.StraightProgressBar
+            android:layout_margin="@dimen/margin_medium_2"
+            android:layout_centerInParent="true"
+            app:strProgress="40"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </RelativeLayout>
 
 </LinearLayout>
