@@ -44,7 +44,7 @@
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <com.mhst.custom_view_assignment.views.CircularImageView
+    <com.mhst.custom_view_assignment.views.custom_components.CircularImageView
         android:id="@+id/ivCreateTask"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -55,7 +55,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_baseline_add_24" />
 
-    <com.mhst.custom_view_assignment.views.CircularProgressView
+    <com.mhst.custom_view_assignment.views.custom_components.CircularProgressView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"

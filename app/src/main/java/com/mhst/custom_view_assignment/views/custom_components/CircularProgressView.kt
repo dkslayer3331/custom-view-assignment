@@ -1,10 +1,8 @@
-package com.mhst.custom_view_assignment.views
+package com.mhst.custom_view_assignment.views.custom_components
 
 import android.content.Context
-import android.content.ReceiverCallNotAllowedException
 import android.graphics.*
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import androidx.core.content.withStyledAttributes
 import com.mhst.custom_view_assignment.R

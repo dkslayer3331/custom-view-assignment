@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mhst.custom_view_assignment.views.CircularImageView
+<com.mhst.custom_view_assignment.views.custom_components.CircularImageView
     android:id="@+id/ivProfile"
     android:layout_width="40dp"
     android:layout_height="40dp"

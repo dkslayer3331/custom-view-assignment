@@ -83,7 +83,7 @@
             app:layout_constraintStart_toEndOf="@+id/ivFile"
             app:layout_constraintTop_toTopOf="@+id/ivFile" />
 
-        <com.mhst.custom_view_assignment.views.CircularImageView
+        <com.mhst.custom_view_assignment.views.custom_components.CircularImageView
             android:id="@+id/circularImageView"
             android:layout_width="40dp"
             android:layout_height="40dp"

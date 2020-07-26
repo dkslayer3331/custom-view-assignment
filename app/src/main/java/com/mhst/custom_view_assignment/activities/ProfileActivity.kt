@@ -7,12 +7,12 @@ import android.os.Bundle
 import com.google.android.material.tabs.TabLayoutMediator
 import com.mhst.custom_view_assignment.R
 import com.mhst.custom_view_assignment.adapters.ViewPagerAdapter
+import com.mhst.custom_view_assignment.mvp.views.ProfileView
 import kotlinx.android.synthetic.main.activity_profile.*
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity(),ProfileView {
 
-    val tabTitles = listOf("Project Tasks","Contacts","About You")
-
+    private val tabTitles = listOf("Project Tasks","Contacts","About You")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +31,10 @@ class ProfileActivity : AppCompatActivity() {
             return Intent(context,
                 ProfileActivity::class.java)
         }
+    }
+
+    override fun showData() {
+
     }
 
 }

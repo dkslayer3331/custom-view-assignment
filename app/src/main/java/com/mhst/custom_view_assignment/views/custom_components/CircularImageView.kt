@@ -1,4 +1,4 @@
-package com.mhst.custom_view_assignment.views
+package com.mhst.custom_view_assignment.views.custom_components
 
 import android.content.Context
 import android.graphics.*

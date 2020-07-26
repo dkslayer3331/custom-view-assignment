@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         tools:context=".activities.ProfileActivity">
 
-        <com.mhst.custom_view_assignment.views.CircularImageView
+        <com.mhst.custom_view_assignment.views.custom_components.CircularImageView
             android:id="@+id/ivUserProfile"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -98,7 +98,7 @@
             app:layout_constraintStart_toStartOf="@+id/tvJobDesc"
             app:layout_constraintTop_toBottomOf="@+id/tvJobDesc" />
 
-        <com.mhst.custom_view_assignment.views.CircularImageView
+        <com.mhst.custom_view_assignment.views.custom_components.CircularImageView
             android:id="@+id/ivShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
             app:layout_constraintTop_toTopOf="@+id/btnMessage"
             app:srcCompat="@drawable/ic_baseline_share_24" />
 
-        <com.mhst.custom_view_assignment.views.CircularImageView
+        <com.mhst.custom_view_assignment.views.custom_components.CircularImageView
             android:id="@+id/ivNotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

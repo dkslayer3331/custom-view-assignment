@@ -9,9 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.mhst.custom_view_assignment.R
 import com.mhst.custom_view_assignment.adapters.ProfileAdapter
 import com.mhst.custom_view_assignment.delegate.Delegate
+import com.mhst.custom_view_assignment.mvp.views.CreateTaskView
 import kotlinx.android.synthetic.main.activity_create_task.*
 
-class CreateTaskActivity : AppCompatActivity(),Delegate {
+class CreateTaskActivity : AppCompatActivity(),Delegate,CreateTaskView {
 
     lateinit var profileAdapter: ProfileAdapter
 
@@ -21,7 +22,6 @@ class CreateTaskActivity : AppCompatActivity(),Delegate {
             orientation = LinearLayoutManager.HORIZONTAL
         }
         rvAssignee.adapter = profileAdapter
-        profileAdapter.setNewData(mutableListOf("one","two","three"))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +54,10 @@ class CreateTaskActivity : AppCompatActivity(),Delegate {
     }
 
     override fun onTap() {
-        TODO("Not yet implemented")
+    }
+
+    override fun showData() {
+        profileAdapter.setNewData(mutableListOf("one","two","three"))
     }
 
 }
